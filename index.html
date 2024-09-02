@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دلفري العراق</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo&display=swap">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f4f4;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .site-logo {
+            max-width: 80%;
+            height: auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: 600;
+            color: #666;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+        }
+
+        .side-button {
+            background-color: #007bff;
+            color: white;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .side-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        .orders-modal {
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            width: 80%;
+            max-height: 80%;
+            overflow-y: auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .close-modal {
+            background-color: #dc3545;
+            color: white;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        #successMessage, #errorMessage {
+            padding: 20px;
+            border-radius: 7px;
+            text-align: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            display: none;
+        }
+
+        #successMessage {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #errorMessage {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- صفحة تسجيل الدخول -->
+    <div class="container" id="loginContainer">
+        <!-- شعار الموقع -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="site-logo">
+        </div>
+
+        <h2>تسجيل دخول المطعم</h2>
+        <div class="form-group">
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email">
+            <span id="emailError" class="error-message"></span>
+        </div>
+        <div class="form-group">
+            <label for="password">كلمة المرور:</label>
+            <input type="password" id="password" name="password">
+            <span id="passwordError" class="error-message"></span>
+        </div>
+        <button id="loginBtn">تسجيل الدخول</button>
+    </div>
+
+    <!-- صفحة طلب السائق -->
+    <div id="orderContainer" style="display:none;">
+        <div class="container">
+            <div id="restaurantName" class="restaurant-name" style="display: none;"></div>
+
+            <div class="form-group">
+                <label for="customerNumber">رقم الزبون:</label>
+                <input type="text" id="customerNumber" name="customerNumber">
+                <span id="customerNumberError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="orderPrice">سعر الطلب:</label>
+                <input type="text" id="orderPrice" name="orderPrice">
+                <span id="orderPriceError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="note">ملاحظة:</label>
+                <input type="text" id="note" name="note">
+                <span id="noteError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="orderLastFourDigits">اكتب آخر 4 أرقام من الطلب:</label>
+                <input type="text" id="orderLastFourDigits" name="orderLastFourDigits">
+                <span id="orderLastFourDigitsError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="location">اسم المنطقة:</label>
+                <select id="location" name="location">
+                    <option value="">اختر المنطقة</option>
+                </select>
+                <span id="locationError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="price">السعر:</label>
+                <input type="text" id="price" name="price" readonly>
+                <span id="priceError" class="error-message"></span>
+            </div>
+
+            <button id="submitOrder">طلب السائق</button>
+            
+        </div>
+
+        <button class="side-button" id="showOrders">عرض سجل الطلبات</button>
+
+        <div class="orders-modal" id="ordersModal" style="display:none;">
+            <h3>سجل الطلبات</h3>
+            <div class="orders-summary">
+                <div class="summary-item"><span>إجمالي الطلبات:</span> <span id="totalOrders">0</span></div>
+                <div class="summary-item"><span>طلبات اليوم:</span> <span id="todayOrders">0</span></div>
+                <div class="summary-item"><span>طلبات الأسبوع:</span> <span id="weeklyOrders">0</span></div>
+                <div class="summary-item"><span>طلبات الشهر:</span> <span id="monthlyOrders">0</span></div>
+            </div>
+            <table id="ordersTable" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>رقم الزبون</th>
+                        <th>المنطقة</th>
+                        <th>السعر</th>
+                        <th>سعر الطلب</th>
+                        <th>ملاحظة</th>
+                        <th>آخر 4 أرقام من الطلب</th>
+                        <th>التاريخ</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersList"></tbody>
+            </table>
+            <button class="close-modal" id="closeModal">إغلاق</button>
+        </div>
+    </div>
+
+    <div id="successMessage">تم استلام طلبك، سوف يصل السائق خلال 5 دقائق أو أقل.</div>
+    <div id="errorMessage">حدث خطأ بسبب عدم اتصالك بالإنترنت أو غيرها. لم يتم إرسال الطلب. يرجى المحاولة مرة أخرى.</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="script.js"></script> <!-- ربط ملف JavaScript -->
+</body>
+</html>

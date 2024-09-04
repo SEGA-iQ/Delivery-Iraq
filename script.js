@@ -2,7 +2,7 @@
 const botToken = '7147928118:AAHYrSRDn5lgQ_hCh1S6pAWoAB9Mtc0rJTc';
 const chatId = '-4599046479';
 let currentRestaurant = JSON.parse(localStorage.getItem('currentRestaurant')) || null;
-const restaurants = ['ازبريي','كوددت','المختار الااراكَيل','عيادة الميار','زهور فانيلا','مينا روز','تجهيزات الملكة'];
+const restaurants = ['ازبريي شارع فلسطين','كوددت','المختار الااراكَيل','عيادة الميار','زهور فانيلا','مينا روز','تجهيزات الملكة'];
 
 // دالة لتحميل بيانات المطعم
 async function loadRestaurantData(restaurantName) {

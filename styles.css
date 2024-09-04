@@ -1,53 +1,64 @@
-/* General Styles */
 body {
     font-family: 'Cairo', sans-serif;
     background-color: #f4f4f4;
+    direction: rtl;
     margin: 0;
     padding: 0;
     color: #333;
-    direction: rtl;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo */
 .logo-container {
     text-align: center;
     margin-bottom: 30px;
+    animation: fadeIn 4s ease-in-out;
 }
 
 .site-logo {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
 }
 
-/* Headings */
+.site-logo:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #444;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Cairo', sans-serif;
 }
 
-/* Form Styles */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 label {
     font-weight: 600;
     color: #666;
+    font-family: 'Cairo', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-input, select, textarea {
+input, select, textarea, button {
     width: 100%;
     padding: 12px;
     margin-top: 5px;
@@ -55,91 +66,80 @@ input, select, textarea {
     border-radius: 6px;
     box-sizing: border-box;
     font-size: 1rem;
+    text-align: left; /* تغيير اتجاه الكتابة */
+    font-family: 'Cairo', sans-serif;
 }
 
 button {
-    padding: 10px 20px;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
     border: none;
     border-radius: 6px;
-    font-size: 1rem;
     cursor: pointer;
+    font-size: 1.2rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
 }
 
-button:hover {
-    transform: translateY(-2px);
-}
-
-/* Primary Button */
-button.primary {
-    background-color: #28a745;
-    color: white;
-}
-
-button.primary:hover {
-    background-color: #218838;
-}
-
-/* Secondary Button */
-button.secondary {
+#loginBtn {
     background-color: #007bff;
     color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-button.secondary:hover {
+#loginBtn:hover {
     background-color: #0056b3;
+    transform: translateY(-3px);
 }
 
-/* Logout Button */
+#submitOrder {
+    background-color: #28a745;
+    color: white;
+    margin: 20px auto;
+    display: block;
+    width: 60%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#submitOrder:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
 #logoutBtn {
     background-color: #dc3545;
     color: white;
-    padding: 10px 20px;
-    border-radius: 50px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#logoutBtn:hover {
-    background-color: #c82333;
-    transform: translateY(-2px);
-}
-
-/* Error and Success Messages */
-#successMessage, #errorMessage {
-    padding: 15px;
-    border-radius: 6px;
-    text-align: center;
     position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    width: 90%;
-    max-width: 400px;
-    display: none;
+    bottom: 20px;
+    left: 20px;
+    width: auto;
+    padding: 10px 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-#successMessage {
-    background-color: #4CAF50;
+.side-button {
+    background-color: #ff8a00;
     color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    width: auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-#errorMessage {
-    background-color: #f44336;
-    color: white;
+.side-button:hover {
+    background-color: #e52e71;
+    transform: translateY(-3px);
 }
 
-/* Orders Modal */
 .orders-modal {
     position: fixed;
     top: 10%;
     right: 10%;
     width: 80%;
-    max-width: 900px;
     max-height: 80%;
     overflow-y: auto;
     background-color: #ffffff;
@@ -152,9 +152,11 @@ button.secondary:hover {
 .close-modal {
     background-color: #dc3545;
     color: white;
+    margin-top: 20px;
+    width: 100%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Table Styles */
 table {
     width: 100%;
     margin-top: 20px;
@@ -165,10 +167,12 @@ th, td {
     padding: 12px;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    font-family: 'Cairo', sans-serif;
 }
 
 th {
     background-color: #f4f4f4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 tr:nth-child(even) {
@@ -179,44 +183,62 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Orders Summary */
-.orders-summary {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #555;
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    display: none;
 }
 
-.summary-item span:first-child {
-    margin-right: 10px;
-    color: #333;
+#successMessage, #errorMessage {
+    padding: 20px;
+    border-radius: 7px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none;
 }
 
-.summary-item span:last-child {
-    color: #007bff;
+#successMessage {
+    background-color: #4CAF50;
+    color: white;
+    font-family: 'Cairo', sans-serif;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+#errorMessage {
+    background-color: #f44336;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* تحسين التوافق مع الهواتف المحمولة */
+@media only screen and (max-width: 768px) {
     .container {
         width: 95%;
-        padding: 10px;
+        padding: 15px;
     }
 
-    .orders-modal {
-        width: 90%;
-    }
-}
-
-@media (max-width: 576px) {
-    .orders-summary {
-        flex-direction: column;
-        align-items: flex-start;
+    h2 {
+        font-size: 1.8rem;
     }
 
-    .summary-item {
-        margin-bottom: 10px;
+    button {
+        font-size: 1rem;
+    }
+
+    #submitOrder {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #logoutBtn, .side-button {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 10px;
     }
 }

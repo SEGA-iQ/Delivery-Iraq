@@ -56,6 +56,7 @@ label {
     color: #666;
     font-family: 'Cairo', sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: right;
 }
 
 input, select, textarea, button {
@@ -66,8 +67,16 @@ input, select, textarea, button {
     border-radius: 6px;
     box-sizing: border-box;
     font-size: 1rem;
-    text-align: left; /* تغيير اتجاه الكتابة */
     font-family: 'Cairo', sans-serif;
+    direction: ltr; /* توجيه الإدخال بشكل افتراضي لليسار */
+    text-align: left; /* محاذاة النصوص لليسار */
+}
+
+body[dir="rtl"] input, 
+body[dir="rtl"] select, 
+body[dir="rtl"] textarea {
+    text-align: right; /* محاذاة النصوص لليمين عند استخدام اللغة العربية */
+    direction: rtl; /* توجيه الإدخال لليمين عند استخدام اللغة العربية */
 }
 
 button {
@@ -168,6 +177,12 @@ th, td {
     text-align: center;
     border-bottom: 1px solid #ddd;
     font-family: 'Cairo', sans-serif;
+    text-align: left;
+}
+
+body[dir="rtl"] th, 
+body[dir="rtl"] td {
+    text-align: right;
 }
 
 th {
@@ -187,6 +202,11 @@ tr:hover {
     color: red;
     font-size: 0.9rem;
     display: none;
+    text-align: left;
+}
+
+body[dir="rtl"] .error-message {
+    text-align: right;
 }
 
 #successMessage, #errorMessage {

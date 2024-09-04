@@ -2,7 +2,7 @@
 const botToken = '7147928118:AAHYrSRDn5lgQ_hCh1S6pAWoAB9Mtc0rJTc';
 const chatId = '-4599046479';
 let currentRestaurant = JSON.parse(localStorage.getItem('currentRestaurant')) || null;
-const restaurants = ['Azbry', 'Codd', 'test'];
+const restaurants = ['Azbry', 'Codd', 'المختار الااراكَيل'];
 
 // دالة لتحميل بيانات المطعم
 async function loadRestaurantData(restaurantName) {

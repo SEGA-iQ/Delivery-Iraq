@@ -82,7 +82,7 @@ async function sendMessageToTelegram(order) {
     });
 
     const message = `
-*📦 طلب جديد من المطعم ${currentRestaurant.name}*
+*📦 طلب جديد من  ${currentRestaurant.name}*
 
 *🔢 رقم الزبون:* \`${order.customerNumber}\`
 *🌍 المنطقة:* ${order.location}

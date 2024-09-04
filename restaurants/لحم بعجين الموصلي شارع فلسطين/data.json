@@ -1,6 +1,6 @@
 {
     "credentials": {
-        "email": "musllyll@delevry.iq",
+        "email": "muslly1@delevry.iq",
         "password": "7667"
      },
     "areas": [
@@ -44,7 +44,7 @@
 	{ "name": "الجادرية", "price": "7000" },
 	{ "name": "الصالحية + شارع حيفا + العطيفية", "price": "6000" },
 	{ "name": "الكاظمية", "price": "8000" },
-	{ "name": "باقي الكرخ بصورة عامة", "price": "10000" }
+	{ "name": "باقي الكرخ بصورة عامة", "price": "10000" },
 	{ "name": "اذا لم تجد المنطقه تواصل معنا ونضيفها", "price": "00010" }
 ],
  "restaurantDetails": " https://maps.app.goo.gl/X2mTCPdYNQ8kyDQy6 " 

@@ -1,6 +1,6 @@
 // تعريف المتغيرات الأساسية
 const botToken = '7147928118:AAHYrSRDn5lgQ_hCh1S6pAWoAB9Mtc0rJTc';
-const chatId = '-4599046479';
+const chatId = '-1002235681013';
 let currentRestaurant = JSON.parse(localStorage.getItem('currentRestaurant')) || null;
 const restaurants = ['ازبريي شارع فلسطين','كوددت','المختار الااراكَيل','عيادة الميار شارع فلسطين','زهور فانيلا','مينا روز شارع فلسطين','تجهيزات الملكة','test','فايرفاير شارع فلسطين','لحم بعجين الموصلي شارع فلسطين','دونير زون','المراعي شارع فلسطين','بيت المندي اليمني شارع فلسطين','ويست برغر القاهرة','توتاروز شارع فلسطين'];
 
@@ -156,8 +156,9 @@ async function handleOrderSubmission() {
 function validateOrderForm(customerNumber, location, price, orderPrice, orderDigits) {
     let isValid = true;
 
-    if (!customerNumber || !/^(07\d{9})$/.test(customerNumber)) {
-        showFieldError('customerNumberError', 'رقم الزبون يجب أن يتكون من 11 رقم ويبدأ بـ 07.');
+    // التحقق من أن الحقل ليس فارغًا فقط، بدون فحص الصيغة أو الطول
+    if (!customerNumber) {
+        showFieldError('customerNumberError', 'يرجى إدخال رقم الزبون.');
         isValid = false;
     } else {
         hideFieldError('customerNumberError');
@@ -186,6 +187,7 @@ function validateOrderForm(customerNumber, location, price, orderPrice, orderDig
 
     return isValid;
 }
+
 
 // دوال لعرض وإخفاء رسائل الخطأ في الحقول
 function showFieldError(elementId, message) {
@@ -355,3 +357,4 @@ document.addEventListener('DOMContentLoaded', function() {
         logout();
     });
 });
+

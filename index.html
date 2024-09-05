@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar">
-<head>
+<head><link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo&display=swap">
-</head>
+</head><link rel="stylesheet" href="styles.css">
 <body>
 
     <!-- رسالة الصيانة -->
-    <div id="maintenanceMessage" style="display: none; background-color: yellow; text-align: center; padding: 10px; font-weight: bold;">
-        البرنامج تحت الصيانة مؤقتاً راسلونا واطلبو على واتس اب، يرجى المحاولة لاحقاً.
+    <div id="maintenanceMessage" style="display: none; background-color: rgb(5, 153, 0); text-align: center; padding: 10px; font-weight: bold;">
+        البرنامج يعمل بنجاج
+في حال حدث اي مشكله توصل معنا.
     </div>
 
     <!-- صفحة تسجيل الدخول -->
@@ -109,7 +110,7 @@
                 <div class="summary-item"><span>طلبات الشهر:</span> <span id="monthlyOrders">0</span></div>
             </div>
             <table id="ordersTable" class="display" style="width:100%">
-                <thead>
+                <thead><link rel="stylesheet" href="styles.css">
                     <tr>
                         <th>رقم الزبون</th>
                         <th>المنطقة</th>
@@ -119,7 +120,7 @@
                         <th>آخر 4 أرقام من الطلب</th>
                         <th>التاريخ</th>
                     </tr>
-                </thead>
+                </thead><link rel="stylesheet" href="styles.css">
                 <tbody id="ordersList"></tbody>
             </table>
             <button class="close-modal" id="closeModal">إغلاق</button>

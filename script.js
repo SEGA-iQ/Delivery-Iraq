@@ -156,9 +156,8 @@ async function handleOrderSubmission() {
 function validateOrderForm(customerNumber, location, price, orderPrice, orderDigits) {
     let isValid = true;
 
-    // التحقق من أن الحقل ليس فارغًا فقط، بدون فحص الصيغة أو الطول
-    if (!customerNumber) {
-        showFieldError('customerNumberError', 'يرجى إدخال رقم الزبون.');
+    if (!customerNumber || !/^(07\d{9})$/.test(customerNumber)) {
+        showFieldError('customerNumberError', 'رقم الزبون يجب أن يتكون من 11 رقم ويبدأ بـ 07.');
         isValid = false;
     } else {
         hideFieldError('customerNumberError');
@@ -187,7 +186,6 @@ function validateOrderForm(customerNumber, location, price, orderPrice, orderDig
 
     return isValid;
 }
-
 
 // دوال لعرض وإخفاء رسائل الخطأ في الحقول
 function showFieldError(elementId, message) {

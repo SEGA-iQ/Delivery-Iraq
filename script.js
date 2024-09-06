@@ -19,10 +19,11 @@ async function loadRestaurantData(restaurantName) {
 
 // دالة لتسجيل الدخول
 async function login(email, password) {
+    const emailLower = email.toLowerCase();  // تحويل البريد الإلكتروني المدخل إلى أحرف صغيرة
     for (const restaurantName of restaurants) {
         try {
             const { credentials, areas, restaurantDetails } = await loadRestaurantData(restaurantName);
-            if (credentials.email === email && credentials.password === password) {
+            if (credentials.email.toLowerCase() === emailLower && credentials.password === password) {  // تحويل البريد الإلكتروني المحفوظ إلى أحرف صغيرة أيضًا
                 currentRestaurant = { name: restaurantName, areas, restaurantDetails };
                 localStorage.setItem('currentRestaurant', JSON.stringify(currentRestaurant));
                 initializeOrderPage();
@@ -35,6 +36,7 @@ async function login(email, password) {
     }
     showErrorMessage('بيانات الدخول غير صحيحة.');
 }
+
 
 // دالة لتهيئة صفحة الطلب بعد تسجيل الدخول
 function initializeOrderPage() {

@@ -212,7 +212,15 @@ function resetOrderForm() {
     document.getElementById('orderPrice').value = '';
     document.getElementById('note').value = '';
     document.getElementById('orderLastFourDigits').value = '';
-}
+} 
+
+$(document).ready(function() {
+    // إظهار رسالة الصيانة لمدة 5 ثوانٍ ثم إخفائها
+    $('#maintenanceMessage').show();
+    setTimeout(function() {
+        $('#maintenanceMessage').fadeOut();
+    }, 5000); // إخفاء الرسالة بعد 5 ثوانٍ
+});
 
 // دوال لعرض رسائل النجاح والخطأ
 function showSuccessMessage(message) {

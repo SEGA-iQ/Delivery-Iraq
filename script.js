@@ -180,8 +180,9 @@ function validateOrderForm(customerNumber, location, price, orderPrice, orderDig
         hideFieldError('orderPriceError');
     }
 
-    if (!orderDigits || orderDigits.length < 2 || orderDigits.length > 10 || isNaN(orderDigits)) {
-        showFieldError('orderLastFourDigitsError', 'يرجى إدخال رقم طلب صحيح من 2 إلى 10 أرقام.');
+    // التحقق من رقم الطلب إذا كان موجوداً، لكنه ليس إلزامياً
+    if (orderDigits && (orderDigits.length < 1 || orderDigits.length > 24 || isNaN(orderDigits))) {
+        showFieldError('orderLastFourDigitsError', 'يرجى إدخال رقم طلب صحيح من 2 إلى 24 أرقام.');
         isValid = false;
     } else {
         hideFieldError('orderLastFourDigitsError');

@@ -2,7 +2,7 @@
 const botToken = '7147928118:AAHYrSRDn5lgQ_hCh1S6pAWoAB9Mtc0rJTc';
 const chatId1 = '@segabaghdad'; // القناة الأولى
 const chatId2 = '@crada_iraq'; // القناة الثانية
-const currentDataVersion = '2.0'; // قم بتغيير الإصدار عند تحديث البيانات
+const currentDataVersion = '3.0'; // قم بتغيير الإصدار عند تحديث البيانات
 
 let currentRestaurant = JSON.parse(localStorage.getItem('currentRestaurant')) || null;
 

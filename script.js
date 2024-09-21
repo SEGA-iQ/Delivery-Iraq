@@ -2,7 +2,7 @@
 const botToken = '7147928118:AAHYrSRDn5lgQ_hCh1S6pAWoAB9Mtc0rJTc';
 const chatId1 = '@delevry_iraq'; // القناة الأولى
 const chatId2 = '@crada_iraq'; // القناة الثانية
-const currentDataVersion = '3.0'; // قم بتغيير الإصدار عند تحديث البيانات
+const currentDataVersion = '1.0'; // قم بتغيير الإصدار عند تحديث البيانات
 
 let currentRestaurant = JSON.parse(localStorage.getItem('currentRestaurant')) || null;
 
@@ -247,27 +247,37 @@ async function sendMessageToTelegram(order) {
     });
 
    // الحصول على رابط موقع المطعم من restaurantDetails.location
-   const restaurantLocation = currentRestaurant.restaurantDetails.location || 'غير متوفر';
+const restaurantLocation = currentRestaurant.restaurantDetails.location || 'غير متوفر';
 
-   const message = `
-*📦 طلب جديد من  ${currentRestaurant.name}*
+// النص المرتب والمنسق للطلب الجديد
+const message = `
+📦 طلب جديد من المطعم: ${currentRestaurant.name}
 
-*🔢 رقم الزبون:* \`${order.customerNumber}\`
-*🌍 المنطقة:* ${order.location}
-*💵 كلفة التوصيل:* ${order.price} دينار
-*🍽️ سعر الطلب:* ${order.orderPrice} دينار
-*📝 ملاحظة:* ${order.note || 'لا يوجد'}
+تفاصيل الطلب:
 
-*🔢 رقم الطلب:* ${order.orderDigits || 'غير متوفر'}
+🔢 رقم الزبون: ${order.customerNumber} (يجب الاتصال بالزبون قبل مغادرة المطعم)
+🌍 المنطقة: ${order.location}
+💵 كلفة التوصيل: ${order.price} دينار
+🍽️ سعر الطلب: ${order.orderPrice} دينار
+📝 ملاحظة: ${order.note || 'لا توجد ملاحظات'}
+🔢 رقم الطلب: ${order.orderDigits || 'غير متوفر'}
 
-*📍 موقع المطعم:* ${restaurantLocation}
+📍 موقع المطعم: ${restaurantLocation}
+(ارسل "تم التسليم" بعد إكمال الطلب)
+📅 التاريخ: ${formattedDate}
+🕒 الوقت: ${formattedTime}
 
-*📅 التاريخ:* ${formattedDate}  
-*🕒 الوقت:* ${formattedTime}
+⚠️ تنبيه هام:  
+ممنوع أخذ أي طلب غير الذي أرسلناه إليك رسميًا.  
+أي طلب إضافي يجب أن يُسجل عبر البرنامج، وإلا يُعتبر سرقة.  
+هذا يسبب خسائر كبيرة للشركة وله عواقب صارمة.
+
+إذا كنت ترغب في استلام الطلب الإضافي، اطلب من المطعم تسجيله في برنامجنا، وسنرسله لك.
+.
 `;
 
-   // تحديد قناة الإرسال بناءً على المطعم
-   const channelId = restaurants.includes(currentRestaurant.name) ? chatId1 : chatId2;
+// تحديد قناة الإرسال بناءً على المطعم
+const channelId = restaurants.includes(currentRestaurant.name) ? chatId1 : chatId2;
 
 
     try {

@@ -1,13 +1,13 @@
 {
     "credentials": {
-        "email": "odin-c@Delivery.iq",
+        "email": "88-cr@Delivery.iq",
         "password": "7667"
     },
-    "isSuspended": false,
+	"isSuspended": false,
     "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
     "forceLogout": false,
     "areas": [
-        { "name": "الكرادة", "price": "2000" },
+       { "name": "الكرادة", "price": "2000" },
         { "name": "الكرادة داخل + الخارج", "price": "3000" },
         { "name": "سعدون", "price": "3000" },
         { "name": "زيونة", "price": "3000" },
@@ -29,6 +29,7 @@
         { "name": "الاعظمية", "price": "7000" },
         { "name": "الدورة", "price": "7000" },
         { "name": "باقي الكرخ بصورة عامة", "price": "8000" }
+	
     ],
     "restaurantDetails": {
         "location": "https://maps.app.goo.gl/iSJa2ZwsMZyeTdyC6",

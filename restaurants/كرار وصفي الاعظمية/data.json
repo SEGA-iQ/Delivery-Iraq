@@ -17,11 +17,22 @@
         { "name": "الشعب", "price": "5000" },
         { "name": "البنوك", "price": "5000" },
         { "name": "حي البساتين", "price": "5000" },
+	{ "name": "بلديات", "price": "6000" },
+	{ "name": "الامين الاوله الامين الثانيه", "price": "7000" },
+	{ "name": "البنوك", "price": "5000" },
+	{ "name": "الغدير", "price": "6000" },
+	{ "name": "بغداد الجديده", "price": "6000" },
+	{ "name": "مجمع الزهور", "price": "7000" },
+	{ "name": "الكرادة", "price": "6000" },
+	{ "name": "الجادرية", "price": "6000" },
         { "name": "الكاظمية", "price": "5000" },
+	{ "name": "العطيفية", "price": "5000" },
+	{ "name": "المنصور", "price": "7000" },
         { "name": "العطيفية", "price": "5000" }
+        { "name": "الكرخ بصورة عامه", "price": "10000" },
     ],
 "restaurantDetails": {
     "location": "https://maps.app.goo.gl/WkH9WTi1LZu3bL7x8",
-    "serviceFee": 500
+    "serviceFee": 0
 }
 }

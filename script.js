@@ -275,7 +275,7 @@ const message = `
 📝 ملاحظة: ${order.note || 'لا توجد ملاحظات'}
 🔢 رقم الطلب: ${order.orderDigits || 'غير متوفر'}
 
-📍 موقع المطعم: ${restaurantLocation}
+📍 الموقع : ${restaurantLocation}
 📅 التاريخ والوقت: ${formattedDate} - ${formattedTime}
 
 ⚠️ تنبيه:

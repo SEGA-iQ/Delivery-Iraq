@@ -266,8 +266,7 @@ async function sendMessageToTelegram(order) {
 const restaurantLocation = currentRestaurant.restaurantDetails.location || 'غير متوفر';
 
 // النص المرتب والمنسق للطلب الجديد
-const message = `
-طلب من : ${currentRestaurant.name}
+const message = `${currentRestaurant.name}
 
 🔢 رقم الزبون: ${order.customerNumber}
 🌍 المنطقة: ${order.location}
@@ -277,7 +276,7 @@ const message = `
 🔢 رقم الطلب: ${order.orderDigits || 'غير متوفر'}
 
 📍 الموقع : ${restaurantLocation}
-📅 التاريخ والوقت: ${formattedDate} - ${formattedTime}
+ ${formattedDate} الوقت ${formattedTime}
 
 ⚠️ تنبيه:
 أي طلب إضافي يجب أن يُسجل بالبرنامج وإلا يُعتبر مخالفًا.

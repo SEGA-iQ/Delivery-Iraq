@@ -372,14 +372,7 @@ async function handleOrderSubmission() {
 function validateOrderForm(customerNumber, location, price, orderPrice, orderDigits) {
     let isValid = true;
 
-    // التحقق من أن الحقل ليس فارغًا فقط، بدون فحص الصيغة أو الطول
-    if (!customerNumber) {
-        showFieldError('customerNumberError', 'يرجى إدخال رقم الزبون.');
-        isValid = false;
-    } else {
-        hideFieldError('customerNumberError');
-    }
-
+    // التحقق من أن الحقل الخاص بالمنطقة ليس فارغًا فقط
     if (!location) {
         showFieldError('locationError', 'يرجى اختيار المنطقة.');
         isValid = false;
@@ -387,7 +380,16 @@ function validateOrderForm(customerNumber, location, price, orderPrice, orderDig
         hideFieldError('locationError');
     }
 
-    if (!orderPrice || isNaN(orderPrice)) {
+    // التحقق من رقم الزبون إذا كان موجوداً، لكنه ليس إلزامياً
+    if (customerNumber && isNaN(customerNumber)) {
+        showFieldError('customerNumberError', 'يرجى إدخال رقم زبون صحيح.');
+        isValid = false;
+    } else {
+        hideFieldError('customerNumberError');
+    }
+
+    // التحقق من سعر الطلب إذا كان موجوداً، لكنه ليس إلزامياً
+    if (orderPrice && isNaN(orderPrice)) {
         showFieldError('orderPriceError', 'يرجى إدخال سعر طلب صحيح.');
         isValid = false;
     } else {

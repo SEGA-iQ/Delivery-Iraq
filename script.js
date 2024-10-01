@@ -383,8 +383,8 @@ function validateOrderForm(customerNumber, location, price, orderPrice, orderDig
     }
 
     // التحقق من رقم الزبون إذا كان موجوداً، لكنه ليس إلزامياً
-    if (customerNumber && isNaN(customerNumber)) {
-        showFieldError('customerNumberError', 'يرجى إدخال رقم زبون صحيح.');
+    if (!customerNumber) {
+        showFieldError('customerNumberError', 'يرجى إدخال رقم الزبون.');
         isValid = false;
     } else {
         hideFieldError('customerNumberError');

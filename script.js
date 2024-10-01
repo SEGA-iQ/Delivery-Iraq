@@ -476,11 +476,20 @@ function showSuccessMessage(message) {
 
 function showErrorMessage(message) {
     const errorMessage = document.getElementById('errorMessage');
-    errorMessage.textContent = message;
+    const errorText = document.getElementById('errorText');
+    errorText.textContent = message;
     errorMessage.style.display = 'block';
-    setTimeout(() => {
-        errorMessage.style.display = 'none';
-    }, 6000);
+}
+function hideErrorMessage() {
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.style.display = 'none';
+}
+
+function showErrorMessage(message) {
+    const errorMessage = document.getElementById('errorMessage');
+    const errorText = document.getElementById('errorText');
+    errorText.textContent = message;
+    errorMessage.style.display = 'block';
 }
 
 

@@ -382,13 +382,12 @@ function validateOrderForm(customerNumber, location, price, orderPrice, orderDig
         hideFieldError('locationError');
     }
 
-    // التحقق من رقم الزبون إذا كان موجوداً، لكنه ليس إلزامياً
-    if (!customerNumber) {
-        showFieldError('customerNumberError', 'يرجى إدخال رقم الزبون.');
-        isValid = false;
-    } else {
-        hideFieldError('customerNumberError');
-    }
+    /// التحقق من رقم الزبون إذا كان موجوداً، لكنه ليس إلزامياً
+if (customerNumber && typeof customerNumber === 'string') {
+    hideFieldError('customerNumberError');
+} else {
+    hideFieldError('customerNumberError');
+}
 
     // التحقق من سعر الطلب إذا كان موجوداً، لكنه ليس إلزامياً
     if (orderPrice && isNaN(orderPrice)) {

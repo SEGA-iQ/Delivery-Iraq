@@ -885,3 +885,7 @@ h4 {
 #closeServiceFee:hover {
     background-color: #ff1a1a; /* لون أكثر إشراقًا عند التمرير على الزر */
 }
+
+#clearServiceFeeTotal {
+    margin-top: 10px; /* اضافة مساحة فوق الزر */
+}

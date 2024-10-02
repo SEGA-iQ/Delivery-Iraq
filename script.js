@@ -163,6 +163,60 @@ async function validateSession() {
     }
 }
 
+// الرقم السري المطلوب
+const secretCode = 'A1122923a';
+
+// مستمع زر مسح مجموع رسوم الخدمة
+document.getElementById('clearServiceFeeTotal').addEventListener('click', function() {
+    // إظهار مربع إدخال الرقم السري
+    document.getElementById('secretCodeModal').style.display = 'block';
+});
+
+// مستمع زر تأكيد إدخال الرقم السري
+document.getElementById('confirmClearServiceFee').addEventListener('click', function() {
+    const inputCode = document.getElementById('secretCode').value;
+
+    // تحقق مما إذا كان الرقم السري صحيحًا
+    if (inputCode === secretCode) {
+        clearServiceFeeTotal(); // استدعاء دالة المسح
+        document.getElementById('secretCodeModal').style.display = 'none'; // إخفاء مربع الإدخال
+        hideErrorMessage(); // إخفاء رسالة الخطأ
+    } else {
+        showErrorMessage('الرقم السري غير صحيح. يرجى المحاولة مرة أخرى.'); // رسالة خطأ
+    }
+    
+    // إعادة تعيين حقل إدخال الرقم السري
+    document.getElementById('secretCode').value = ''; // إعادة تعيين الحقل
+});
+
+
+// مستمع زر إلغاء إدخال الرقم السري
+document.getElementById('cancelClearServiceFee').addEventListener('click', function() {
+    document.getElementById('secretCodeModal').style.display = 'none'; // إخفاء مربع الإدخال
+});
+
+// دالة لمسح مجموع رسوم الخدمة
+function clearServiceFeeTotal() {
+    const ordersKey = `${currentRestaurant.name}_orders`;
+    localStorage.removeItem(ordersKey); // إزالة الطلبات من localStorage
+    updateServiceFeeTotal(); // تحديث مجموع رسوم الخدمة في الواجهة
+    showSuccessMessage('تم مسح مجموع رسوم الخدمة بنجاح.');
+}
+
+// دوال لعرض وإخفاء رسائل الخطأ
+function showErrorMessage(message) {
+    const errorMessage = document.getElementById('errorMessage');
+    const errorText = document.getElementById('errorText');
+    errorText.textContent = message;
+    errorMessage.style.display = 'block';
+}
+
+function hideErrorMessage() {
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.style.display = 'none';
+}
+
+
 
 // تحديث دالة تسجيل الدخول لتخزين بيانات الاعتماد بشكل صحيح
 async function login(email, password) {

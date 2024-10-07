@@ -172,7 +172,7 @@ async function validateSession() {
 }
 
 // الرقم السري المطلوب
-const secretCode = 'A1122923a';
+const secretCode = 'A1122923Aa';
 
 // مستمع زر مسح مجموع رسوم الخدمة
 document.getElementById('clearServiceFeeTotal').addEventListener('click', function() {

@@ -1,6 +1,6 @@
 {
     "credentials": {
-        "email": "azbry@delevry.iq",
+        "email": "firefly@delevry.iq",
         "password": "123"
      },
     "areas": [
@@ -51,7 +51,7 @@
 	
 ],
 "restaurantDetails": {
-    "location": "https://maps.app.goo.gl/MsJ4xa9oKr7NbN828",
+    "location": "https://maps.app.goo.gl/YYYRN2xT6Bj3gY2c7",
     "serviceFee": 0
 }
 }

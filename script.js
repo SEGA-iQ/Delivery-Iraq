@@ -9,6 +9,7 @@ let currentRestaurant = JSON.parse(localStorage.getItem('currentRestaurant')) ||
 // قائمة المطاعم للقناة الأولى
 const restaurants = [
     'ازبريي شارع فلسطين',
+    'Codd',
     'كوددت',
     'المختار الااراكَيل',
     'عيادة الميار شارع فلسطين',

@@ -3,7 +3,7 @@
         "email": "Asmkmm@Delivery.iq",
         "password": "7667"
     },
-	"isSuspended": true,
+	"isSuspended": false,
     "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
     "forceLogout": false,
     "areas": [
@@ -35,6 +35,6 @@
     ],
     "restaurantDetails": {
         "location": "https://maps.app.goo.gl/g9VFkaD8wSW5Jd1g8",
-        "serviceFee": 0
+        "serviceFee": 500
     }
 }

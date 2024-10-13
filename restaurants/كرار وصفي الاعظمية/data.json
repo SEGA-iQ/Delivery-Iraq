@@ -3,7 +3,7 @@
         "email": "krsf@Delivery.iq",
         "password": "7667"
     },
-	"isSuspended": true,
+	"isSuspended": false,
     "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
     "forceLogout": false,
     "areas": [

@@ -360,86 +360,89 @@ const message = `${currentRestaurant.name}
 const channelId = restaurants.includes(currentRestaurant.name) ? chatId1 : chatId2;
 
 
-    try {
-        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                chat_id: channelId,
-                text: message,
-                parse_mode: 'Markdown'
-            })
-        });
+try {
+    const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            chat_id: channelId,
+            text: message,
+            parse_mode: 'Markdown'
+        })
+    });
 
-        if (!response.ok) throw new Error('فشل في إرسال الرسالة إلى Telegram');
-        console.log('تم إرسال الرسالة إلى Telegram بنجاح.');
-        showSuccessMessage('تم إرسال الطلب بنجاح وسيصل السائق خلال 10 دقائق أو أقل.');
-    } catch (error) {
-        console.error('خطأ في إرسال الرسالة:', error);
-        showErrorMessage('حدث خطأ بسبب عدم اتصالك بالإنترنت أو غيرها. لم يتم إرسال الطلب. يرجى المحاولة مرة أخرى.');
-    }
+    if (!response.ok) throw new Error('فشل في إرسال الرسالة إلى Telegram');
+    console.log('تم إرسال الرسالة إلى Telegram بنجاح.');
+    return true;  // النجاح
+} catch (error) {
+    console.error('خطأ في إرسال الرسالة:', error);
+    showErrorMessage('حدث خطأ بسبب عدم اتصالك بالإنترنت أو غيرها. لم يتم إرسال الطلب. يرجى المحاولة مرة أخرى.');
+    return false;  // الفشل
 }
-
-
+}
 
 // دالة لمعالجة إرسال الطلب
 async function handleOrderSubmission() {
-    // التحقق من صحة الجلسة
-    const sessionResult = await validateSession();
-    if (!sessionResult.isValid) return; // إذا كان الحساب موقوفًا وتم طرد المستخدم، الخروج من الدالة
+const sessionResult = await validateSession();
+if (!sessionResult.isValid) return; // إذا كان الحساب موقوفًا
 
-    // إذا كان الحساب موقوفًا ولكن بدون طرد المستخدم، فقط إظهار رسالة ومنع إرسال الطلب
-    if (sessionResult.isSuspended) {
-        showErrorMessage(` ${data.suspensionReason}`);
-        return;
-    }
-
-    const submitButton = document.getElementById('submitOrder');
-    submitButton.disabled = true;  // تعطيل الزر
-
-    showLoadingIndicator();  // إظهار شاشة التحميل
-
-    // جمع بيانات النموذج
-    const customerNumber = document.getElementById('customerNumber').value.trim();
-    const location = document.getElementById('location').value;
-    const price = document.getElementById('price').value.trim();
-    const orderPrice = document.getElementById('orderPrice').value.trim();
-    const note = document.getElementById('note').value.trim();
-    const orderDigits = document.getElementById('orderLastFourDigits').value.trim();
-
-    const serviceFee = currentRestaurant.restaurantDetails.serviceFee || 0;
-
-    if (!validateOrderForm(customerNumber, location, price, orderPrice, orderDigits)) {
-        hideLoadingIndicator();  // إخفاء شاشة التحميل
-        submitButton.disabled = false;  // إعادة تفعيل الزر
-        return;
-    }
-
-    const order = {
-        customerNumber,
-        location,
-        price,
-        orderPrice,
-        note,
-        orderDigits,
-        serviceFee,
-        date: new Date(),
-        restaurantDetails: currentRestaurant.restaurantDetails
-    };
-
-    // إرسال الطلب إلى Telegram وحفظه في localStorage
-    await sendMessageToTelegram(order);
-    saveOrder(order);
-
-    updateServiceFeeTotal();  // تحديث مجموع رسوم الخدمة
-    resetOrderForm();
-
-    hideLoadingIndicator();  // إخفاء شاشة التحميل
-    submitButton.disabled = false;  // إعادة تفعيل الزر
+if (sessionResult.isSuspended) {
+    showErrorMessage(` ${data.suspensionReason}`);
+    return;
 }
 
+const submitButton = document.getElementById('submitOrder');
+submitButton.disabled = true;
+
+showLoadingIndicator();
+
+// جمع بيانات النموذج
+const customerNumber = document.getElementById('customerNumber').value.trim();
+const location = document.getElementById('location').value;
+const price = document.getElementById('price').value.trim();
+const orderPrice = document.getElementById('orderPrice').value.trim();
+const note = document.getElementById('note').value.trim();
+const orderDigits = document.getElementById('orderLastFourDigits').value.trim();
+
+const serviceFee = currentRestaurant.restaurantDetails.serviceFee || 0;
+
+if (!validateOrderForm(customerNumber, location, price, orderPrice, orderDigits)) {
+    hideLoadingIndicator();
+    submitButton.disabled = false;
+    return;
+}
+
+const order = {
+    customerNumber,
+    location,
+    price,
+    orderPrice,
+    note,
+    orderDigits,
+    serviceFee,
+    date: new Date(),
+    restaurantDetails: currentRestaurant.restaurantDetails
+};
+
+// محاولة إرسال الطلب إلى Telegram
+const isMessageSent = await sendMessageToTelegram(order);
+
+if (isMessageSent) {
+    // إذا تم إرسال الطلب بنجاح، قم بحفظه، وجمع رسوم الخدمة، ومسح الحقول
+    saveOrder(order);
+    updateServiceFeeTotal();
+    resetOrderForm();
+    showSuccessMessage('تم إرسال الطلب بنجاح وسيصل السائق خلال 10 دقائق أو أقل.');
+} else {
+    // في حالة الفشل، لا تقم بحفظ الطلب ولا تجمع الرسوم ولا تمسح الحقول
+    showErrorMessage('فشل في إرسال الطلب. لم يتم حفظ الطلب أو جمع الرسوم. يرجى المحاولة مرة أخرى.');
+}
+
+hideLoadingIndicator();
+submitButton.disabled = false;
+}
 // دالة للتحقق من صحة نموذج الطلب
 function validateOrderForm(customerNumber, location, price, orderPrice, orderDigits) {
     let isValid = true;

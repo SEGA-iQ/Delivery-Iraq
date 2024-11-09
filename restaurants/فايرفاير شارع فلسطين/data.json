@@ -2,8 +2,8 @@
     "credentials": {
         "email": "firefire@delevry.iq",
         "password": "7667"
-     },
-	 "isSuspended": false,
+    },
+	"isSuspended": false,
     "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
     "forceLogout": false,
     "areas": [
@@ -50,10 +50,9 @@
 	{ "name": "الصالحية + شارع حيفا + العطيفية", "price": "6000" },
 	{ "name": "الكاظمية", "price": "8000" },
 	{ "name": "باقي الكرخ بصورة عامة", "price": "10000" }
-	
-],
-"restaurantDetails": {
+  ],
+	"restaurantDetails": {
     "location": "https://maps.app.goo.gl/SjM2gz2VJfUkCHh29",
-    "serviceFee": 500
+    "serviceFee": 0
 }
 }

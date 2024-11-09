@@ -3,6 +3,9 @@
         "email": "firefly@delivery.iq",
         "password": "7667"
      },
+	 "isSuspended": false,
+    "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
+    "forceLogout": false,
     "areas": [
 	{ "name": "جميع مناطق شارع فلسطين", "price": "2000" },
 	{ "name": "النهضة", "price": "3000" },

@@ -3,7 +3,7 @@
         "email": "firefly@delivery.iq",
         "password": "7667"
      },
-	 "isSuspended": true,
+	 "isSuspended": false,
     "suspensionReason": "لعدم اشتراكك بصورة مستمرة  مع البرنامج تواصل مع الدعم الفني على واتساب لعودة الخدمة ",
     "forceLogout": false,
     "areas": [

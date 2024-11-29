@@ -4,8 +4,8 @@
         "password": "7667"
      },
     "areas": [
-	{ "name": "طلب سائق", "price": "0" }
 	{ "name": "طلب سائق", "price": "0" },
+	{ "name": "طلب سائق", "price": "0" }
 ],
 "restaurantDetails": {
     "location": "https://maps.app.goo.gl/Ez2TXukeKQmv72Dt8",

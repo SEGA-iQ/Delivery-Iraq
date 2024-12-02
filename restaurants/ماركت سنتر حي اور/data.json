@@ -1,0 +1,18 @@
+
+{
+ "credentials": {
+                "email": "haeor1@delivry.iq",
+                "password": "7667"
+             },
+             "isSuspended": false,
+             "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
+             "forceLogout": false,
+            "areas": [
+            { "name": "طلب سائق", "price": "0" },
+            { "name": "طلب سائق", "price": "0" }
+        ],
+        "restaurantDetails": {
+            "location": "https://maps.app.goo.gl/ciYGHqDm5XwC5pyM9",
+            "serviceFee": 300
+        }
+        }

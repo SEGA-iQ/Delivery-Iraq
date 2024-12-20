@@ -2,10 +2,10 @@
     "credentials": {
         "email": "iraq3@Delivery.iq",
         "password": "7667"
- },
-	"isSuspended": true,
-    "suspensionReason": " تم ايقاف الطلبات مؤقتاً بسبب الامطار والضروف الجوية ",
-    "forceLogout": true,
+    },
+	"isSuspended": false,
+    "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
+    "forceLogout": false,
     "areas": [
          { "name": "الاعظمية", "price": "3000" },
     { "name": "الوزيرية", "price": "3000" },

@@ -3,9 +3,9 @@
         "email": "fandon@Delivrey.iq",
         "password": "7667"
  },
-	"isSuspended": true,
+	"isSuspended": false,
     "suspensionReason": " تم ايقاف الطلبات مؤقتاً بسبب الامطار والضروف الجوية ",
-    "forceLogout": true,
+    "forceLogout": false,
     "areas": [
 	{ "name": "جميع مناطق شارع فلسطين", "price": "2000" },
 	{ "name": "النهضة", "price": "3000" },

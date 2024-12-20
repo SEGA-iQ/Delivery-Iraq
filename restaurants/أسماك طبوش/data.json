@@ -3,8 +3,8 @@
         "email": "ssg9@delevry.iq",
         "password": "7667"
     },
-	"isSuspended": true,
-    "suspensionReason": "تم ايقاف الطلبات مؤقتاً بسبب الامطار ",
+	"isSuspended": false,
+    "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
     "forceLogout": false,
     "areas": [
 	{ "name": "جميع مناطق شارع فلسطين", "price": "2000" },

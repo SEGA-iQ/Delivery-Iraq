@@ -2,10 +2,10 @@
     "credentials": {
         "email": "muslly1@delevry.iq",
         "password": "7667"
-     },
-	 "isSuspended": false,
-    "suspensionReason": "لعدم اشتراكك بصورة مستمرة مع البرنامج : تواصل معنا على واتساب لفتح البرنامج",
-    "forceLogout": false,
+ },
+	"isSuspended": true,
+    "suspensionReason": " تم ايقاف الطلبات مؤقتاً بسبب الامطار والضروف الجوية ",
+    "forceLogout": true,
     "areas": [
 	{ "name": "جميع مناطق شارع فلسطين", "price": "2000" },
 	{ "name": "النهضة", "price": "3000" },

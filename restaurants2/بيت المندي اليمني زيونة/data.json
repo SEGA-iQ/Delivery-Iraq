@@ -2,10 +2,10 @@
     "credentials": {
         "email": "betmande2@Delivery.iq",
         "password": "7667"
-     },
-    "isSuspended": false,
-    "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
-    "forceLogout": false,
+ },
+	"isSuspended": true,
+    "suspensionReason": " تم ايقاف الطلبات مؤقتاً بسبب الامطار والضروف الجوية ",
+    "forceLogout": true,
     "areas": [
         { "name": "زيونة", "price": "2000" },
         { "name": "شقق زيونة", "price": "3000" },

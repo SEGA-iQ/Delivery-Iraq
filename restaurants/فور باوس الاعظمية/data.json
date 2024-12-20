@@ -5,7 +5,7 @@
  },
 	"isSuspended": true,
     "suspensionReason": " تم ايقاف الطلبات مؤقتاً بسبب الامطار والضروف الجوية ",
-    "forceLogout": false,
+    "forceLogout": true,
     "areas": [
          { "name": "الاعظمية", "price": "3000" },
     { "name": "الوزيرية", "price": "3000" },

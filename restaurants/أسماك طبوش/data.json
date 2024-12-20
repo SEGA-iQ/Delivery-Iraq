@@ -3,7 +3,7 @@
         "email": "ssg9@delevry.iq",
         "password": "7667"
     },
-	"isSuspended": ture,
+	"isSuspended": true,
     "suspensionReason": "تم ايقاف الطلبات مؤقتاً بسبب الامطار ",
     "forceLogout": false,
     "areas": [

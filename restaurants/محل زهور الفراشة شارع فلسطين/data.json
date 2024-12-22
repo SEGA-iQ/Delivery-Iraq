@@ -3,9 +3,9 @@
         "email": "frasha@Delivery.iq",
         "password": "7667"
      },
-	 "isSuspended": true,
+	 "isSuspended": false,
     "suspensionReason": "لفتح الحساب  لرجاء التواصل مع الدعم الفني",
-    "forceLogout": true,
+    "forceLogout": false,
     "areas": [
 	{ "name": "جميع مناطق شارع فلسطين", "price": "3000" },
 	{ "name": "النهضة", "price": "4000" },

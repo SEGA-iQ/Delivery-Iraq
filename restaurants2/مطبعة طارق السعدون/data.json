@@ -1,0 +1,18 @@
+{
+    "credentials": {
+        "email": "shorma66@Delivery.iq",
+        "password": "7667"
+    },
+	"isSuspended": false,
+    "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
+    "forceLogout": false,
+    "areas": [
+       { "name": "رصافة", "price": "5000" },
+        { "name": "كرخ ", "price": "10000" }
+	
+    ],
+    "restaurantDetails": {
+        "location": "https://maps.app.goo.gl/HGaHG9zYHAceS9TU9",
+        "serviceFee": 500
+    }
+}

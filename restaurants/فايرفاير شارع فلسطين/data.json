@@ -4,7 +4,7 @@
         "password": "7667"
     },
 	"isSuspended": true,
-    "suspensionReason": "تم ايقاف الطلبات بسبب عدم التزامك بنظام عمل الشركة  ",
+    "suspensionReason": "تم إيقاف خدمة توصيل الطلبات بسبب عدم التزامكم بنظام عمل الشركة.  ",
     "forceLogout": true,
     "areas": [
 	{ "name": "جميع مناطق شارع فلسطين", "price": "2000" },

@@ -53,6 +53,6 @@
   ],
 	"restaurantDetails": {
     "location": "https://maps.app.goo.gl/SjM2gz2VJfUkCHh29",
-    "serviceFee": 0
+    "serviceFee": 500
 }
 }

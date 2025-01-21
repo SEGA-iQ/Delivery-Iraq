@@ -1,6 +1,6 @@
 {
     "credentials": {
-        "email": "carbon@Delivery.iq",
+        "email": "jblphone@Delivery.iq",
         "password": "7667"
     },
 	"isSuspended": false,
@@ -26,13 +26,14 @@
         { "name": "الفضيلية", "price": "5000" },
         { "name": "بغداد جديدة", "price": "5000" },
         { "name": "النعيرية", "price": "5000" },
+	    { "name": "الشعب + حي تونس + حي اور", "price": "7000" },
         { "name": "الامين الاول", "price": "5000" },
         { "name": "الامين الثانية", "price": "6000" },
         { "name": "الدورة", "price": "8000" },
         { "name": "باقي الكرخ بصورة عامة", "price": "10000" }
     ],
     "restaurantDetails": {
-        "location": "https://maps.app.goo.gl/XeuuZjkVyjJEAAxq9",
+        "location": "https://maps.app.goo.gl/sSmVzZ89izgh7q559",
         "serviceFee": 500
     }
 }

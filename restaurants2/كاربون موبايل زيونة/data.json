@@ -1,13 +1,13 @@
 {
     "credentials": {
-        "email": "jblphone@Delivery.iq",
+        "email": "carbon@Delivery.iq",
         "password": "7667"
     },
 	"isSuspended": false,
     "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
     "forceLogout": false,
     "areas": [
-        { "name": "زيونة", "price": "3000" },
+        { "name": "زيونة", "price": "2000" },
         { "name": "شقق زيونة", "price": "3000" },
         { "name": "شارع فلسطين", "price": "5000" },
         { "name": "الاعظمية", "price": "7000" },
@@ -33,7 +33,7 @@
         { "name": "باقي الكرخ بصورة عامة", "price": "10000" }
     ],
     "restaurantDetails": {
-        "location": "https://maps.app.goo.gl/sSmVzZ89izgh7q559",
+        "location": "https://maps.app.goo.gl/5h81Pcet9bJ19KRo9",
         "serviceFee": 500
     }
 }

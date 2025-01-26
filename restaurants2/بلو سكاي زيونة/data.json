@@ -3,9 +3,9 @@
         "email": "bluesky@Delivery.iq",
         "password": "7667"
     },
-	"isSuspended": false,
+	"isSuspended": true,
     "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
-    "forceLogout": false,
+    "forceLogout": true,
     "areas": [
         { "name": "زيونة", "price": "2000" },
         { "name": "شقق زيونة", "price": "3000" },

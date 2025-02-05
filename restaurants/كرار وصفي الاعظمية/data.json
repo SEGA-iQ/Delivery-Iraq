@@ -4,7 +4,7 @@
         "password": "7667"
     },
 	"isSuspended": true,
-    "suspensionReason": "عليك دفع اشتراك شهري والبالغ 70 الف شهريا لستمرار العمل",
+    "suspensionReason": "عليك دفع اشتراك والبالغ 70 الف شهريا, لستمرار العمل",
     "forceLogout": true,
     "areas": [
            { "name": "الاعظمية", "price": "2000" },

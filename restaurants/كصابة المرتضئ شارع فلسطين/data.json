@@ -3,9 +3,9 @@
         "email": "MRtda@delevry.iq",
         "password": "7667"
      },
-	 "isSuspended": false,
+	 "isSuspended": true,
     "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
-    "forceLogout": false,
+    "forceLogout": true,
     "areas": [
 	{ "name": "جميع مناطق شارع فلسطين", "price": "2000" },
 	{ "name": "النهضة", "price": "3000" },

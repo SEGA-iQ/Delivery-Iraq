@@ -3,9 +3,9 @@
         "email": "frasha@Delivery.iq",
         "password": "7667"
      },
-	 "isSuspended": false,
-    "suspensionReason": "لفتح الحساب  لرجاء التواصل مع الدعم الفني",
-    "forceLogout": false,
+	 "isSuspended": true,
+    "suspensionReason": " تم إيقاف الخدمة لمخالفة قوانين العمل بإعطاء الطلبات لسائقين خارج الشركة، مما ألغى الفترة المجانية. لاستمرار الخدمة، يجب دفع اشتراك شهري قدره 50 ألف دينار. ",
+    "forceLogout": true,
     "areas": [
 	{ "name": "جميع مناطق شارع فلسطين", "price": "3000" },
 	{ "name": "النهضة", "price": "4000" },

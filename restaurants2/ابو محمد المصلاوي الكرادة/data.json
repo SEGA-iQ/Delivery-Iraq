@@ -3,9 +3,9 @@
         "email": "mslaoy2@Delivery.iq",
         "password": "7667"
     },
-	"isSuspended": false,
+	"isSuspended": true,
     "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
-    "forceLogout": false,
+    "forceLogout": true,
     "areas": [
        { "name": "الكرادة", "price": "2000" },
         { "name": "الكرادة داخل + الخارج", "price": "3000" },

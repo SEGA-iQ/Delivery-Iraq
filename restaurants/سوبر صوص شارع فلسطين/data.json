@@ -3,9 +3,9 @@
         "email": "superso@delevry.iq",
         "password": "7667"
     },
-	"isSuspended": false,
-    "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
-    "forceLogout": false,
+	"isSuspended": true,
+    "suspensionReason": " الرجاء التواصل مع الدعم الفني لفتح الحساب",
+    "forceLogout": true,
     "areas": [
 	{ "name": "جميع مناطق شارع فلسطين", "price": "2000" },
 	{ "name": "النهضة", "price": "3000" },

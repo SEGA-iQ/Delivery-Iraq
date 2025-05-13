@@ -3,9 +3,9 @@
         "email": "jdoo1@delevry.iq",
         "password": "7667"
     },
-	"isSuspended": false,
-    "suspensionReason": "تم إيقاف خدمة توصيل الطلبات بسبب عدم التزامكم بنظام عمل الشركة.  ",
-    "forceLogout": false,
+	"isSuspended": true,
+    "suspensionReason": "تم إيقاف  توصيل  موقتا بسبب تكرار ارقام هواتف الزبائن و اخطاء في رفع الطلبات .  ",
+    "forceLogout": true,
     "areas": [
 	{ "name": "جميع مناطق شارع فلسطين", "price": "2000" },
 	{ "name": "النهضة", "price": "3000" },

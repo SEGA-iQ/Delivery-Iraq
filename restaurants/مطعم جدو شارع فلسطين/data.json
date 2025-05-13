@@ -3,7 +3,7 @@
         "email": "jdoo1@delevry.iq",
         "password": "7667"
     },
-	"isSuspended": true,
+	"isSuspended": false,
     "suspensionReason": "تم إيقاف  توصيل  موقتا بسبب تكرار ارقام هواتف الزبائن و اخطاء في رفع الطلبات .  ",
     "forceLogout": false,
     "areas": [

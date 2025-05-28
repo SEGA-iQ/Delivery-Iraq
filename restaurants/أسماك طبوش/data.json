@@ -3,7 +3,7 @@
         "email": "ssg9@delevry.iq",
         "password": "7667"
     },
-	"isSuspended": true,
+	"isSuspended": false,
     "suspensionReason": "يجب تفعيل الاشتراك الشهري بقيمة 50,000 دينار عراقي، ويتم دفع المبلغ مقدمًا لضمان استمرار الخدمة.",
     "forceLogout": false,
     "areas": [

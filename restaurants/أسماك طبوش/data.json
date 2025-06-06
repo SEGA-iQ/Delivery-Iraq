@@ -3,8 +3,8 @@
         "email": "ssg9@delevry.iq",
         "password": "7667"
     },
-	"isSuspended": false,
-    "suspensionReason": "يجب تفعيل الاشتراك الشهري بقيمة 50,000 دينار عراقي، ويتم دفع المبلغ مقدمًا لضمان استمرار الخدمة.",
+	"isSuspended": true,
+    "suspensionReason": "تواصل مع الدعم لفني  ليتم الاتفاق على نظام العمل الجديد.",
     "forceLogout": false,
     "areas": [
 	{ "name": "جميع مناطق شارع فلسطين", "price": "2000" },

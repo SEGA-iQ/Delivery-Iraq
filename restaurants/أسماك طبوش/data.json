@@ -4,7 +4,7 @@
         "password": "7667"
     },
 	"isSuspended": true,
-    "suspensionReason": "تواصل مع الدعم لفني  ليتم الاتفاق على نظام العمل الجديد.",
+    "suspensionReason": "لشغيل البرنامج تواصل مع الدعم لفني  ليتم الاتفاق على نظام العمل الجديد.",
     "forceLogout": false,
     "areas": [
 	{ "name": "جميع مناطق شارع فلسطين", "price": "2000" },

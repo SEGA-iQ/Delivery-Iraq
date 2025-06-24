@@ -1,0 +1,43 @@
+{
+    "credentials": {
+        "email": "diet101@Delivery.iq",
+        "password": "7667"
+    },
+	"isSuspended": false,
+    "suspensionReason": "تم ايقاف الطلبات الرجاء التواصل مع الدعم الفني",
+    "forceLogout": false,
+    "areas": [
+        { "name": "زيونة", "price": "2000" },
+        { "name": "شقق زيونة", "price": "3000" },
+        { "name": "شارع فلسطين", "price": "5000" },
+	    { "name": " القاهرة", "price": "6000" },
+	    { "name": " بنوك", "price": "6000" },
+	    { "name": "الوزيرية", "price": "6000" },
+        { "name": "الاعظمية", "price": "7000" },
+	    { "name": "الكريعات", "price": "8000" },
+        { "name": " كرادة", "price": "3000" },
+        { "name": "كرادة داخل + الخارج", "price": "4000" },
+        { "name": "الجادرية", "price": "5000" },
+        { "name": "الغدير", "price": "3000" },
+        { "name": "تل محمد", "price": "3000" },
+        { "name": "البلديات", "price": "5000" },
+        { "name": "الحبيبية", "price": "5000" },
+        { "name": "المدينة", "price": "6000" },
+        { "name": "العبيدي", "price": "6000" },
+        { "name": "المشتل", "price": "5000" },
+        { "name": "الكمالية", "price": "5000" },
+        { "name": "الفضيلية", "price": "5000" },
+        { "name": "بغداد جديدة", "price": "5000" },
+        { "name": "النعيرية", "price": "5000" },
+        { "name": "الامين الاول", "price": "5000" },
+        { "name": "وزيريه ", "price": "6000" },
+        { "name": "الشعب + حي تونس + حي البساتين", "price": "7000" },
+        { "name": "الامين الثانية", "price": "6000" },
+        { "name": "الدورة", "price": "8000" },
+        { "name": "باقي الكرخ بصورة عامة", "price": "10000" }
+    ],
+    "restaurantDetails": {
+        "location": "https://maps.app.goo.gl/FEqqPvr832AxeryN9",
+        "serviceFee": 0
+    }
+}

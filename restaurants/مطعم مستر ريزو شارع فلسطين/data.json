@@ -1,6 +1,6 @@
 {
     "credentials": {
-        "email": "rezochch@Delivery.iq",
+        "email": "jdoburger@Delivery.iq",
         "password": "7667"
      },
 	 "isSuspended": false,
@@ -8,8 +8,6 @@
     "forceLogout": false,
     "areas": [
 	{ "name": " شارع فلسطين", "price": "2000" },
-	{ "name": " شارع فلسطين مول النخيل او تقاطع النخيل", "price": "2500" },
-	{ "name": "  شارع فلسطين النيل", "price": "2500" },
 	{ "name": "النهضة", "price": "4000" },
 	{ "name": "القاهرة المؤال", "price": "2000" },
 	{ "name": "القاهرة الظباط", "price": "3000" },
@@ -55,7 +53,7 @@
 	{ "name": "اذا لم تجد المنطقه تواصل معنا ونضيفها", "price": "00010" }
 ],
 "restaurantDetails": {
-    "location": "https://maps.app.goo.gl/ECHExtCrsdPYYYm28",
-    "serviceFee": 0
+    "location": "https://maps.app.goo.gl/N36XR7iwtQrvupZk8",
+    "serviceFee": 500
 }
 }

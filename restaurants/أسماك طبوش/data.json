@@ -3,7 +3,7 @@
         "email": "ssg9@delevry.iq",
         "password": "7667"
     },
-	"isSuspended": true,
+	"isSuspended": false,
     "suspensionReason": "لشغيل البرنامج تواصل مع الدعم لفني  ليتم الاتفاق على نظام العمل الجديد.",
     "forceLogout": false,
     "areas": [
@@ -54,6 +54,6 @@
 ],
 "restaurantDetails": {
     "location": "https://maps.app.goo.gl/xj15gF4Sq1zqNg987",
-    "serviceFee": 500
+    "serviceFee": 0
 }
 }

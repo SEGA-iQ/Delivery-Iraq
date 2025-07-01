@@ -3,7 +3,7 @@
         "email": "tbosh2@Delivery.iq",
         "password": "7667"
      },
-	 "isSuspended": true,
+	 "isSuspended": false,
     "suspensionReason": "لشغيل البرنامج تواصل مع الدعم لفني  ليتم الاتفاق على نظام العمل الجديد",
     "forceLogout": false,
     "areas": [
